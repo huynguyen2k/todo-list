@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/15e239e756.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tasks List</h1>
+    </header>
+
+    <form>
+        <div class="row">
+            <input type="text" class="task-input" placeholder="Write your task">
+            <button>
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+    </form>
+
+    <div class="filter">
+        <select>
+            <option value="all">All</option>
+            <option value="finished">Finished</option>
+            <option value="unfinished">Unfinished</option>
+        </select>
+    </div>
+
+    <div class="tasks-container">
+        <ul class="tasks-list">
+            
+        </ul>
+        <div class="finished-message">
+            <h3>You are finished all tasks</h3>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

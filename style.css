@@ -1,0 +1,177 @@
+@font-face {
+    src: url(Font/Poppins-Regular.ttf);
+    font-family: myFont;
+}
+
+@font-face {
+    src: url(Font/Poppins-Bold.ttf);
+    font-family: myFont;
+    font-weight: bold;
+}
+
+@font-face {
+    src: url(Font/Poppins-Italic.ttf);
+    font-family: myFont;
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+    background-image: linear-gradient(120deg, rgb(0, 255, 110), rgb(0, 255, 234));
+    font-family: myFont, sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px;
+    color: tomato;
+}
+
+form {
+    text-align: center;
+}
+
+form,
+.tasks-container {
+    width: 350px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+form input {
+    width: 100%;
+    padding: 5px 35px 5px 7px;
+    font-size: 1.2rem;
+    height: 35px;
+    outline: none;
+    border: none;
+}
+
+form button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: inherit;
+    border-radius: 50%;
+    transition: all .1s ease;
+    outline: none;
+    color: tomato;
+}
+
+form button:hover {
+    background-color: rgb(255, 153, 0);
+    color: white;
+}
+
+.tasks-list {
+    list-style: none;
+}
+
+.tasks-list > li {
+    background-color: white;
+    height: 36px;
+    margin-bottom: 5px;
+    transition: 0.5s ease;
+}
+
+.tasks-list > li > span {
+    display: inline-block;
+    padding: 0 7px;
+    line-height: 36px;
+    font-size: 17px;
+    overflow-x: hidden;
+    max-width: 275px;
+}
+
+.tasks-list > li > button {
+    height: 100%;
+    float: right;
+    width: 35px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 36px;
+    outline: none;
+}
+
+.tasks-list > li > .btn-finish {
+    background-color: rgb(52, 204, 29);
+}
+.tasks-list > li > .btn-delete {
+    background-color: rgb(245, 87, 59);
+}
+
+.btn-delete > i,
+.btn-finish > i {
+    pointer-events: none;
+}
+
+.fall-task {
+    transform: translateY(200px);
+    opacity: 0;
+}
+
+.tasks-list > li > .finish-task {
+    background-color: white;
+    color: rgb(52, 204, 29);
+}
+
+.filter {
+    margin-left: 832px;
+    margin-bottom: 10px;
+}
+
+.filter > select {
+    padding: 8px 30px 8px 10px;
+    outline: none;
+    border: none;
+    appearance: none;
+    color: tomato;
+}
+
+.filter::after {
+    content: "\25BC";
+    position: relative;
+    top: 0px;
+    right: 24px;
+    font-size: 0.8rem;
+    color: tomato;
+    pointer-events: none;
+}
+
+
+.filter > select > option {
+    border: none;
+    outline: none;
+}
+
+.tasks-container .finished-message {
+    text-align: center;
+    color: tomato;
+    background-color: rgb(25, 216, 73);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 20px;
+    opacity: 0;
+    transition: .5s ease;
+}
